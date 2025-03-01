@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/b417c0f022f4a0cbd38f6cf08f920d6f -->
+<html><div id="in-page-channel-node-id" data-channel-name="in_page_channel_l34bGP"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>show_images – Medium</title><meta name="description" content="show_images. GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./7b99b39764d3a6dcdcd2fd01699cc75c.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-9060cf3ad5bb.css"><div id="gist129992435" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-show_images-py" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="file-show_images-py">
+
+        
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table data-hpc="" class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-path="show_images.py">
+        <tbody><tr>
+          <td id="file-show_images-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-show_images-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># Train images</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-show_images-py-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">i</span>, <span class="pl-s1">data_train</span> <span class="pl-c1">=</span> <span class="pl-en">next</span>(<span class="pl-en">enumerate</span>(<span class="pl-s1">datamodule</span>.<span class="pl-c1">train_dataloader</span>()))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-show_images-py-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">data_train</span>.<span class="pl-c1">keys</span>(), <span class="pl-s1">data_train</span>[<span class="pl-s">"image"</span>].<span class="pl-c1">shape</span>) <span class="pl-c"># it takes a batch of images</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-show_images-py-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># for each key extract the first image</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-show_images-py-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"data_train['image_path'][0]: {} - data_train['image'][0].shape: {} - data_train['label'][0]: {} - torch.max(data_train['image][0]): {} - torch.min(data_train['image][0]): {}"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">data_train</span>[<span class="pl-s">'image_path'</span>][<span class="pl-c1">0</span>], <span class="pl-s1">data_train</span>[<span class="pl-s">'image'</span>][<span class="pl-c1">0</span>].<span class="pl-c1">shape</span>, <span class="pl-s1">data_train</span>[<span class="pl-s">'label'</span>][<span class="pl-c1">0</span>], <span class="pl-s1">torch</span>.<span class="pl-c1">max</span>(<span class="pl-s1">data_train</span>[<span class="pl-s">'image'</span>][<span class="pl-c1">0</span>]), <span class="pl-s1">torch</span>.<span class="pl-c1">min</span>(<span class="pl-s1">data_train</span>[<span class="pl-s">'image'</span>][<span class="pl-c1">0</span>])))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-show_images-py-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">img_train</span> <span class="pl-c1">=</span> <span class="pl-en">to_pil_image</span>(<span class="pl-s1">data_train</span>[<span class="pl-s">"image"</span>][<span class="pl-c1">0</span>].<span class="pl-c1">clone</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-show_images-py-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-show_images-py-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># val images</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-show_images-py-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">i</span>, <span class="pl-s1">data_val</span> <span class="pl-c1">=</span> <span class="pl-en">next</span>(<span class="pl-en">enumerate</span>(<span class="pl-s1">datamodule</span>.<span class="pl-c1">val_dataloader</span>()))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-show_images-py-LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># for each key extract the first image</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-show_images-py-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"data_val['image_path'][0]: {} - data_val['image'][0].shape: {} - data_val['label'][0]: {}"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">data_val</span>[<span class="pl-s">'image_path'</span>][<span class="pl-c1">0</span>], <span class="pl-s1">data_val</span>[<span class="pl-s">'image'</span>][<span class="pl-c1">0</span>].<span class="pl-c1">shape</span>, <span class="pl-s1">data_val</span>[<span class="pl-s">'label'</span>][<span class="pl-c1">0</span>]))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-show_images-py-LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">img_val</span> <span class="pl-c1">=</span> <span class="pl-en">to_pil_image</span>(<span class="pl-s1">data_val</span>[<span class="pl-s">"image"</span>][<span class="pl-c1">0</span>].<span class="pl-c1">clone</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-show_images-py-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-show_images-py-LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># test images</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-show_images-py-LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">i</span>, <span class="pl-s1">data_test</span> <span class="pl-c1">=</span> <span class="pl-en">next</span>(<span class="pl-en">enumerate</span>(<span class="pl-s1">datamodule</span>.<span class="pl-c1">test_dataloader</span>()))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-show_images-py-LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># for each key extract the first image</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-show_images-py-LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"data_test['image_path'][0]: {} - data_test['image'][0].shape: {} - data_test['label'][0]: {}"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">data_test</span>[<span class="pl-s">'image_path'</span>][<span class="pl-c1">0</span>], <span class="pl-s1">data_test</span>[<span class="pl-s">'image'</span>][<span class="pl-c1">0</span>].<span class="pl-c1">shape</span>, <span class="pl-s1">data_test</span>[<span class="pl-s">'label'</span>][<span class="pl-c1">0</span>]))</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-show_images-py-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">img_test</span> <span class="pl-c1">=</span> <span class="pl-en">to_pil_image</span>(<span class="pl-s1">data_test</span>[<span class="pl-s">"image"</span>][<span class="pl-c1">0</span>].<span class="pl-c1">clone</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-show_images-py-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-show_images-py-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># from the datamodule extract the train, val and test Pandas dataset and collect all the info in a csv</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-show_images-py-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">train_dataset</span> <span class="pl-c1">=</span> <span class="pl-s1">datamodule</span>.<span class="pl-c1">train_data</span>.<span class="pl-c1">samples</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-show_images-py-LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">test_dataset</span> <span class="pl-c1">=</span> <span class="pl-s1">datamodule</span>.<span class="pl-c1">test_data</span>.<span class="pl-c1">samples</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-show_images-py-LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">val_dataset</span> <span class="pl-c1">=</span> <span class="pl-s1">datamodule</span>.<span class="pl-c1">val_data</span>.<span class="pl-c1">samples</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-show_images-py-LC24" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-show_images-py-LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># check the data distribution for each category in each data split</span></td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L26" class="blob-num js-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-show_images-py-LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"TRAIN DATASET FEATURES"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L27" class="blob-num js-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-show_images-py-LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">train_dataset</span>.<span class="pl-c1">info</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L28" class="blob-num js-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-show_images-py-LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L29" class="blob-num js-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-show_images-py-LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"IMAGE DISTRIBUTION BY CLASS"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L30" class="blob-num js-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-show_images-py-LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L31" class="blob-num js-line-number js-blob-rnum" data-line-number="31"></td>
+          <td id="file-show_images-py-LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">desc_grouped</span> <span class="pl-c1">=</span> <span class="pl-s1">train_dataset</span>[[<span class="pl-s">'label'</span>]].<span class="pl-c1">value_counts</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L32" class="blob-num js-line-number js-blob-rnum" data-line-number="32"></td>
+          <td id="file-show_images-py-LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">desc_grouped</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L33" class="blob-num js-line-number js-blob-rnum" data-line-number="33"></td>
+          <td id="file-show_images-py-LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"----------------------------------------------------------"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L34" class="blob-num js-line-number js-blob-rnum" data-line-number="34"></td>
+          <td id="file-show_images-py-LC34" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"TEST DATASET FEATURES"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L35" class="blob-num js-line-number js-blob-rnum" data-line-number="35"></td>
+          <td id="file-show_images-py-LC35" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">test_dataset</span>.<span class="pl-c1">info</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L36" class="blob-num js-line-number js-blob-rnum" data-line-number="36"></td>
+          <td id="file-show_images-py-LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L37" class="blob-num js-line-number js-blob-rnum" data-line-number="37"></td>
+          <td id="file-show_images-py-LC37" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"IMAGE DISTRIBUTION BY CLASS"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L38" class="blob-num js-line-number js-blob-rnum" data-line-number="38"></td>
+          <td id="file-show_images-py-LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L39" class="blob-num js-line-number js-blob-rnum" data-line-number="39"></td>
+          <td id="file-show_images-py-LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">desc_grouped</span> <span class="pl-c1">=</span> <span class="pl-s1">test_dataset</span>[[<span class="pl-s">'label'</span>]].<span class="pl-c1">value_counts</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L40" class="blob-num js-line-number js-blob-rnum" data-line-number="40"></td>
+          <td id="file-show_images-py-LC40" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">desc_grouped</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L41" class="blob-num js-line-number js-blob-rnum" data-line-number="41"></td>
+          <td id="file-show_images-py-LC41" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"----------------------------------------------------------"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L42" class="blob-num js-line-number js-blob-rnum" data-line-number="42"></td>
+          <td id="file-show_images-py-LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"VAL DATASET FEATURES"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L43" class="blob-num js-line-number js-blob-rnum" data-line-number="43"></td>
+          <td id="file-show_images-py-LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">val_dataset</span>.<span class="pl-c1">info</span>())</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L44" class="blob-num js-line-number js-blob-rnum" data-line-number="44"></td>
+          <td id="file-show_images-py-LC44" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L45" class="blob-num js-line-number js-blob-rnum" data-line-number="45"></td>
+          <td id="file-show_images-py-LC45" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">"IMAGE DISTRIBUTION BY CLASS"</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L46" class="blob-num js-line-number js-blob-rnum" data-line-number="46"></td>
+          <td id="file-show_images-py-LC46" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s">""</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L47" class="blob-num js-line-number js-blob-rnum" data-line-number="47"></td>
+          <td id="file-show_images-py-LC47" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">desc_grouped</span> <span class="pl-c1">=</span> <span class="pl-s1">val_dataset</span>[[<span class="pl-s">'label'</span>]].<span class="pl-c1">value_counts</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L48" class="blob-num js-line-number js-blob-rnum" data-line-number="48"></td>
+          <td id="file-show_images-py-LC48" class="blob-code blob-code-inner js-file-line"><span class="pl-en">print</span>(<span class="pl-s1">desc_grouped</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L49" class="blob-num js-line-number js-blob-rnum" data-line-number="49"></td>
+          <td id="file-show_images-py-LC49" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L50" class="blob-num js-line-number js-blob-rnum" data-line-number="50"></td>
+          <td id="file-show_images-py-LC50" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">datamodule</span>.<span class="pl-c1">train_data</span>.<span class="pl-c1">samples</span>.<span class="pl-c1">to_csv</span>(<span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">join</span>(<span class="pl-s">"/home/enrico/Projects/Image_Anomaly_Detection/data"</span>, <span class="pl-s">"datamodule_train.csv"</span>), <span class="pl-s1">index</span><span class="pl-c1">=</span><span class="pl-c1">False</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L51" class="blob-num js-line-number js-blob-rnum" data-line-number="51"></td>
+          <td id="file-show_images-py-LC51" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">datamodule</span>.<span class="pl-c1">test_data</span>.<span class="pl-c1">samples</span>.<span class="pl-c1">to_csv</span>(<span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">join</span>(<span class="pl-s">"/home/enrico/Projects/Image_Anomaly_Detection/data"</span>, <span class="pl-s">"datamodule_test.csv"</span>), <span class="pl-s1">index</span><span class="pl-c1">=</span><span class="pl-c1">False</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-show_images-py-L52" class="blob-num js-line-number js-blob-rnum" data-line-number="52"></td>
+          <td id="file-show_images-py-LC52" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">datamodule</span>.<span class="pl-c1">val_data</span>.<span class="pl-c1">samples</span>.<span class="pl-c1">to_csv</span>(<span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">join</span>(<span class="pl-s">"/home/enrico/Projects/Image_Anomaly_Detection/data"</span>, <span class="pl-s">"datamodule_val.csv"</span>), <span class="pl-s1">index</span><span class="pl-c1">=</span><span class="pl-c1">False</span>)</td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/enrico310786/7b99b39764d3a6dcdcd2fd01699cc75c/raw/dc04eb3ae21e21212104bae87d18a8b4282a2785/show_images.py" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/enrico310786/7b99b39764d3a6dcdcd2fd01699cc75c#file-show_images-py" class="Link--inTextBlock">
+          show_images.py
+        </a>
+        hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;919b692d1e77e0c8&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.1.0&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;}" crossorigin="anonymous"></script>
+</body></html>

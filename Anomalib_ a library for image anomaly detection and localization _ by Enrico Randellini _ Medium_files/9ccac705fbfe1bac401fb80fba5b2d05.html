@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/9ccac705fbfe1bac401fb80fba5b2d05 -->
+<html><div id="in-page-channel-node-id" data-channel-name="in_page_channel_FZQaB1"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Folder – Medium</title><meta name="description" content="Folder. GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./f14c0d8261d29d483928a9cd19e21d4e.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-9060cf3ad5bb.css"><div id="gist129992405" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-folder-py" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="file-folder-py">
+
+        
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table data-hpc="" class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-path="folder.py">
+        <tbody><tr>
+          <td id="file-folder-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-folder-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> <span class="pl-s1">anomalib</span>.<span class="pl-s1">data</span>.<span class="pl-s1">image</span>.<span class="pl-s1">folder</span> <span class="pl-k">import</span> <span class="pl-v">Folder</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-folder-py-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> <span class="pl-s1">anomalib</span> <span class="pl-k">import</span> <span class="pl-v">TaskType</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-folder-py-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> <span class="pl-s1">anomalib</span>.<span class="pl-s1">data</span>.<span class="pl-s1">utils</span> <span class="pl-k">import</span> <span class="pl-v">ValSplitMode</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-folder-py-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-folder-py-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># set the dataset root for a particular category</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-folder-py-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">dataset_root</span> <span class="pl-c1">=</span> <span class="pl-s">"/home/enrico/Projects/Image_Anomaly_Detection/dataset/images_lego_256/one_up"</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-folder-py-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-folder-py-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># Create the datamodule</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-folder-py-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">datamodule</span> <span class="pl-c1">=</span> <span class="pl-en">Folder</span>(</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-folder-py-LC10" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">name</span><span class="pl-c1">=</span><span class="pl-s">"one_up"</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-folder-py-LC11" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">root</span><span class="pl-c1">=</span><span class="pl-s1">dataset_root</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-folder-py-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">normal_dir</span><span class="pl-c1">=</span><span class="pl-s">"90_DEG"</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-folder-py-LC13" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">abnormal_dir</span><span class="pl-c1">=</span><span class="pl-s">"abnormal"</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-folder-py-LC14" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">task</span><span class="pl-c1">=</span><span class="pl-v">TaskType</span>.<span class="pl-c1">CLASSIFICATION</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-folder-py-LC15" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">seed</span><span class="pl-c1">=</span><span class="pl-c1">42</span>,</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-folder-py-LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">normal_split_ratio</span><span class="pl-c1">=</span><span class="pl-c1">0.2</span>, <span class="pl-c"># default value</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-folder-py-LC17" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">val_split_mode</span><span class="pl-c1">=</span><span class="pl-v">ValSplitMode</span>.<span class="pl-c1">FROM_TEST</span>, <span class="pl-c"># default value</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-folder-py-LC18" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">val_split_ratio</span><span class="pl-c1">=</span><span class="pl-c1">0.5</span>, <span class="pl-c"># default value</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-folder-py-LC19" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">train_batch_size</span><span class="pl-c1">=</span><span class="pl-c1">32</span>, <span class="pl-c"># default value</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-folder-py-LC20" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">eval_batch_size</span><span class="pl-c1">=</span><span class="pl-c1">32</span>, <span class="pl-c"># default value</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-folder-py-LC21" class="blob-code blob-code-inner js-file-line">    <span class="pl-c">#image_size=(512,512)</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-folder-py-LC22" class="blob-code blob-code-inner js-file-line">)</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-folder-py-LC23" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-folder-py-LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-c"># Setup the datamodule</span></td>
+        </tr>
+        <tr>
+          <td id="file-folder-py-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-folder-py-LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">datamodule</span>.<span class="pl-c1">setup</span>()</td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/enrico310786/f14c0d8261d29d483928a9cd19e21d4e/raw/4e6c5584fe16cb009f26ec74a84ad7250278a40a/folder.py" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/enrico310786/f14c0d8261d29d483928a9cd19e21d4e#file-folder-py" class="Link--inTextBlock">
+          folder.py
+        </a>
+        hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;919b692edf61e0c8&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.1.0&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;}" crossorigin="anonymous"></script>
+</body></html>

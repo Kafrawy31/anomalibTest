@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/e1c3ccf0cabe21e5adf577570232f8da -->
+<html><div id="in-page-channel-node-id" data-channel-name="in_page_channel_PUVWOg"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>video2frame – Medium</title><meta name="description" content="video2frame. GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./edfe775f5015eec83006fc1ea8782147.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-9060cf3ad5bb.css"><div id="gist129991091" class="gist">
+    <div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container">
+  <div id="file-video2frame-py" class="file my-2">
+    
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-python  " style="overflow: auto" tabindex="0" role="region" aria-label="file-video2frame-py">
+
+        
+<div class="js-check-bidi js-blob-code-container blob-code-content">
+
+  <template class="js-file-alert-template"></template>
+<template class="js-line-alert-template"></template>
+
+  <table data-hpc="" class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="" data-tagsearch-path="video2frame.py">
+        <tbody><tr>
+          <td id="file-video2frame-py-L1" class="blob-num js-line-number js-blob-rnum" data-line-number="1"></td>
+          <td id="file-video2frame-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-s1">os</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L2" class="blob-num js-line-number js-blob-rnum" data-line-number="2"></td>
+          <td id="file-video2frame-py-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-s1">cv2</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L3" class="blob-num js-line-number js-blob-rnum" data-line-number="3"></td>
+          <td id="file-video2frame-py-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L4" class="blob-num js-line-number js-blob-rnum" data-line-number="4"></td>
+          <td id="file-video2frame-py-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L5" class="blob-num js-line-number js-blob-rnum" data-line-number="5"></td>
+          <td id="file-video2frame-py-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">def</span> <span class="pl-en">extract_frames</span>(<span class="pl-s1">video_path</span>, <span class="pl-s1">output_folder</span>, <span class="pl-s1">final_size</span>, <span class="pl-s1">offset</span>):</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L6" class="blob-num js-line-number js-blob-rnum" data-line-number="6"></td>
+          <td id="file-video2frame-py-LC6" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"># Open the video</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L7" class="blob-num js-line-number js-blob-rnum" data-line-number="7"></td>
+          <td id="file-video2frame-py-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">video</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">VideoCapture</span>(<span class="pl-s1">video_path</span>)</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L8" class="blob-num js-line-number js-blob-rnum" data-line-number="8"></td>
+          <td id="file-video2frame-py-LC8" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">success</span>, <span class="pl-s1">frame</span> <span class="pl-c1">=</span> <span class="pl-s1">video</span>.<span class="pl-c1">read</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L9" class="blob-num js-line-number js-blob-rnum" data-line-number="9"></td>
+          <td id="file-video2frame-py-LC9" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">count</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L10" class="blob-num js-line-number js-blob-rnum" data-line-number="10"></td>
+          <td id="file-video2frame-py-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L11" class="blob-num js-line-number js-blob-rnum" data-line-number="11"></td>
+          <td id="file-video2frame-py-LC11" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"># Iter to extract the frames</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L12" class="blob-num js-line-number js-blob-rnum" data-line-number="12"></td>
+          <td id="file-video2frame-py-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> <span class="pl-s1">success</span>:</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L13" class="blob-num js-line-number js-blob-rnum" data-line-number="13"></td>
+          <td id="file-video2frame-py-LC13" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"># Crop the frames to the center to obtain a square frame</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L14" class="blob-num js-line-number js-blob-rnum" data-line-number="14"></td>
+          <td id="file-video2frame-py-LC14" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">min_dim</span> <span class="pl-c1">=</span> <span class="pl-en">min</span>(<span class="pl-s1">frame</span>.<span class="pl-c1">shape</span>[<span class="pl-c1">0</span>], <span class="pl-s1">frame</span>.<span class="pl-c1">shape</span>[<span class="pl-c1">1</span>])</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L15" class="blob-num js-line-number js-blob-rnum" data-line-number="15"></td>
+          <td id="file-video2frame-py-LC15" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">center_x</span>, <span class="pl-s1">center_y</span> <span class="pl-c1">=</span> <span class="pl-s1">frame</span>.<span class="pl-c1">shape</span>[<span class="pl-c1">1</span>] <span class="pl-c1">//</span> <span class="pl-c1">2</span>, <span class="pl-s1">frame</span>.<span class="pl-c1">shape</span>[<span class="pl-c1">0</span>] <span class="pl-c1">//</span> <span class="pl-c1">2</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L16" class="blob-num js-line-number js-blob-rnum" data-line-number="16"></td>
+          <td id="file-video2frame-py-LC16" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">half_dim</span> <span class="pl-c1">=</span> <span class="pl-s1">min_dim</span> <span class="pl-c1">//</span> <span class="pl-c1">2</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L17" class="blob-num js-line-number js-blob-rnum" data-line-number="17"></td>
+          <td id="file-video2frame-py-LC17" class="blob-code blob-code-inner js-file-line">        <span class="pl-c">#print("min_dim: {} - center_x: {} - center_y: {} - half_dim: {}".format(min_dim, center_x, center_y, half_dim))</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L18" class="blob-num js-line-number js-blob-rnum" data-line-number="18"></td>
+          <td id="file-video2frame-py-LC18" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">cropped_frame</span> <span class="pl-c1">=</span> <span class="pl-s1">frame</span>[<span class="pl-s1">center_y</span> <span class="pl-c1">-</span> <span class="pl-s1">half_dim</span> <span class="pl-c1">-</span> <span class="pl-s1">offset</span>:<span class="pl-s1">center_y</span> <span class="pl-c1">+</span> <span class="pl-s1">half_dim</span> <span class="pl-c1">-</span> <span class="pl-s1">offset</span>, <span class="pl-s1">center_x</span> <span class="pl-c1">-</span> <span class="pl-s1">half_dim</span>:<span class="pl-s1">center_x</span> <span class="pl-c1">+</span> <span class="pl-s1">half_dim</span>]</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L19" class="blob-num js-line-number js-blob-rnum" data-line-number="19"></td>
+          <td id="file-video2frame-py-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L20" class="blob-num js-line-number js-blob-rnum" data-line-number="20"></td>
+          <td id="file-video2frame-py-LC20" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"># Resize the frames to final_size</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L21" class="blob-num js-line-number js-blob-rnum" data-line-number="21"></td>
+          <td id="file-video2frame-py-LC21" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">resized_frame</span> <span class="pl-c1">=</span> <span class="pl-s1">cv2</span>.<span class="pl-c1">resize</span>(<span class="pl-s1">cropped_frame</span>, (<span class="pl-s1">final_size</span>, <span class="pl-s1">final_size</span>))</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L22" class="blob-num js-line-number js-blob-rnum" data-line-number="22"></td>
+          <td id="file-video2frame-py-LC22" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L23" class="blob-num js-line-number js-blob-rnum" data-line-number="23"></td>
+          <td id="file-video2frame-py-LC23" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">frame_path</span> <span class="pl-c1">=</span> <span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">output_folder</span><span class="pl-kos">}</span></span>/frame_<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">count</span><span class="pl-kos">}</span></span>.jpg"</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L24" class="blob-num js-line-number js-blob-rnum" data-line-number="24"></td>
+          <td id="file-video2frame-py-LC24" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">cv2</span>.<span class="pl-c1">imwrite</span>(<span class="pl-s1">frame_path</span>, <span class="pl-s1">resized_frame</span>)  <span class="pl-c"># Save the frame</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L25" class="blob-num js-line-number js-blob-rnum" data-line-number="25"></td>
+          <td id="file-video2frame-py-LC25" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">success</span>, <span class="pl-s1">frame</span> <span class="pl-c1">=</span> <span class="pl-s1">video</span>.<span class="pl-c1">read</span>()  <span class="pl-c"># read the next frame</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L26" class="blob-num js-line-number js-blob-rnum" data-line-number="26"></td>
+          <td id="file-video2frame-py-LC26" class="blob-code blob-code-inner js-file-line">        <span class="pl-s1">count</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span></td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L27" class="blob-num js-line-number js-blob-rnum" data-line-number="27"></td>
+          <td id="file-video2frame-py-LC27" class="blob-code blob-code-inner js-file-line">
+</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L28" class="blob-num js-line-number js-blob-rnum" data-line-number="28"></td>
+          <td id="file-video2frame-py-LC28" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">video</span>.<span class="pl-c1">release</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L29" class="blob-num js-line-number js-blob-rnum" data-line-number="29"></td>
+          <td id="file-video2frame-py-LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-s1">cv2</span>.<span class="pl-c1">destroyAllWindows</span>()</td>
+        </tr>
+        <tr>
+          <td id="file-video2frame-py-L30" class="blob-num js-line-number js-blob-rnum" data-line-number="30"></td>
+          <td id="file-video2frame-py-LC30" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> <span class="pl-s1">count</span></td>
+        </tr>
+  </tbody></table>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/enrico310786/edfe775f5015eec83006fc1ea8782147/raw/80734733e0d26dae77f54a71b613d46fbf8e5537/video2frame.py" style="float:right" class="Link--inTextBlock">view raw</a>
+        <a href="https://gist.github.com/enrico310786/edfe775f5015eec83006fc1ea8782147#file-video2frame-py" class="Link--inTextBlock">
+          video2frame.py
+        </a>
+        hosted with ❤ by <a class="Link--inTextBlock" href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;919b6931387ce0c8&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.1.0&quot;,&quot;token&quot;:&quot;0b5f665943484354a59c39c6833f7078&quot;}" crossorigin="anonymous"></script>
+</body></html>
